@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Toggle label="Live Mode" v-on:toggle="onLiveToggle"></Toggle>
-    <Toggle label="Secure Mode" v-on:toggle="onLiveToggle"></Toggle>
+    <Toggle label="Live Mode" v-model:value="isLiveMode"></Toggle>
+    <Toggle label="Secure Mode" v-model:value="isSecureMode"></Toggle>
     <div class="panel-el raised-m">Enable Secure Mode</div>
     <div class="panel-el raised-m">Decode Encode -Auto-</div>
     <div></div>
@@ -10,23 +10,22 @@
 </template>
 
 <script lang="ts">
-// import { Options, Vue } from "vue-class-component";
-
-import { defineComponent } from "vue";
+// import { defineComponent } from "vue";
+import { ref } from "vue";
 import Toggle from "./Toggle.vue";
 
-const ControlPanel = defineComponent({
-  components: {
-    Toggle,
-  },
-  methods: {
-    onLiveToggle: (checked: boolean) => {
-      console.log({ checked });
-    },
-  },
-});
+export default {
+  components: { Toggle },
+  setup() {
+    const isLiveMode = ref(true);
+    const isSecureMode = ref(true);
 
-export default ControlPanel;
+    return {
+      isLiveMode,
+      isSecureMode,
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">

@@ -1,42 +1,31 @@
 <template>
   <div class="toggle-wrapper">
+    <span class="toggle-label">{{ label }}</span>
     <label class="toggle-control">
-      <input type="checkbox" v-model="checked" @change="$emit('toggle', !checked)" />
+      <input type="checkbox" :checked="value" @change="this.$emit('update:value', !this.value)" />
       <span class="control"></span>
     </label>
-    <span class="toggle-label">{{ label }}</span>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-
-const Toggle = defineComponent({
-  data() {
-    return {
-      checked: true,
-    };
-  },
+export default {
   props: {
-    label: {
-      type: String,
-      default: "label",
-    },
+    value: Boolean,
+    label: String,
   },
-});
-
-export default Toggle;
+};
 </script>
 
 <style scoped lang="scss">
 // Tweak these to change the style of the toggle
-$toggle-background-color-on: dodgerblue;
-$toggle-background-color-off: rgb(184, 184, 184);
+$toggle-background-color-on: #4b92ff;
+$toggle-background-color-off: #d5dbf3;
 $toggle-control-color: white;
-$color-nm-light-off: #dfdfdf;
-$color-nm-dark-off: #919191;
-$color-nm-light-on: #4dafff;
-$color-nm-dark-on: #3981cf;
+$color-nm-light-off: #eef6fa;
+$color-nm-dark-off: #b5bacf;
+$color-nm-light-on: #90c3fa;
+$color-nm-dark-on: #2e6cca;
 $toggle-width: 50px;
 $toggle-height: 30px;
 $toggle-gutter: 5px;
@@ -58,6 +47,8 @@ $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
 
 .toggle-label {
   padding-left: 5px;
+  color: rgb(124, 124, 124);
+  font-weight: 500;
 }
 
 .toggle-control {
@@ -79,8 +70,8 @@ $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
 
   input:checked ~ .control {
     background-color: $toggle-background-color-on;
-    box-shadow: inset 5px 5px 10px $color-nm-dark-on,
-      inset -5px -5px 10px $color-nm-light-on;
+    box-shadow: inset 3px 3px 6px $color-nm-dark-on,
+      inset -3px -3px 6px $color-nm-light-on;
 
     &:after {
       left: $toggle-width - $toggle-control-size - $toggle-gutter;
@@ -96,8 +87,8 @@ $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
     border-radius: $toggle-radius;
     background-color: $toggle-background-color-off;
     transition: background-color $toggle-control-speed $toggle-control-ease;
-    box-shadow: inset 5px 5px 10px $color-nm-dark-off,
-      inset -5px -5px 10px $color-nm-light-off;
+    box-shadow: inset 3px 3px 6px $color-nm-dark-off,
+      inset -3px -3px 6px $color-nm-light-off;
 
     &:after {
       content: "";
