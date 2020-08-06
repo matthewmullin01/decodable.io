@@ -1,6 +1,6 @@
 <template>
   <div class="toggle-wrapper">
-    <span class="toggle-label">{{ label }}</span>
+    <span class="toggle-label label">{{ label }}</span>
     <label class="toggle-control">
       <input type="checkbox" :checked="value" @change="this.$emit('update:value', !this.value)" />
       <span class="control"></span>
@@ -18,14 +18,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-// Tweak these to change the style of the toggle
 $toggle-background-color-on: #4b92ff;
 $toggle-background-color-off: #d5dbf3;
 $toggle-control-color: white;
-$color-nm-light-off: #eef6fa;
-$color-nm-dark-off: #b5bacf;
-$color-nm-light-on: #90c3fa;
-$color-nm-dark-on: #2e6cca;
+
 $toggle-width: 50px;
 $toggle-height: 30px;
 $toggle-gutter: 5px;
@@ -47,8 +43,6 @@ $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
 
 .toggle-label {
   padding-left: 5px;
-  color: rgb(124, 124, 124);
-  font-weight: 500;
 }
 
 .toggle-control {

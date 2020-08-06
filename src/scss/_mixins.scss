@@ -1,0 +1,18 @@
+@mixin gradientBg($startColor, $endColor) {
+  background: $startColor;
+  background: -moz-linear-gradient(left, $startColor 0%, $endColor 80%, $endColor 100%);
+  background: -webkit-linear-gradient(left, $startColor 0%, $endColor 80%, $endColor 100%);
+  background: linear-gradient(to right, $startColor 0%, $endColor 80%, $endColor 100%);
+}
+
+@mixin raised() {
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px $color-nm-dark, -5px -5px 10px $color-nm-light;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+@mixin lowered() {
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 10px $color-nm-dark, inset -5px -5px 10px $color-nm-light;
+  transition: box-shadow 0.3s ease-in-out;
+}

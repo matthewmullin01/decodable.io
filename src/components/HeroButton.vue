@@ -17,28 +17,6 @@ export default class HeroButton extends Vue {}
 $color-dark: #3382fe;
 $color-light: #5c9dff;
 
-@mixin gradientBg($startColor, $endColor) {
-  background: $startColor;
-  background: -moz-linear-gradient(
-    left,
-    $startColor 0%,
-    $endColor 80%,
-    $endColor 100%
-  );
-  background: -webkit-linear-gradient(
-    left,
-    $startColor 0%,
-    $endColor 80%,
-    $endColor 100%
-  );
-  background: linear-gradient(
-    to right,
-    $startColor 0%,
-    $endColor 80%,
-    $endColor 100%
-  );
-}
-
 button {
   border: none;
   display: inline-block;

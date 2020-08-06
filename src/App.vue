@@ -17,10 +17,6 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-$color-bg: #e8eaf3;
-$color-nm-light: #ffffff;
-$color-nm-dark: #c5c7cf;
-
 * {
   background: $color-bg;
 }
@@ -30,6 +26,12 @@ $color-nm-dark: #c5c7cf;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+label,
+.label {
+  color: $color-label;
+  font-weight: 500;
 }
 
 .container {
@@ -92,13 +94,10 @@ $color-nm-dark: #c5c7cf;
 }
 
 .raised-m {
-  border-radius: 15px;
-  box-shadow: 5px 5px 10px $color-nm-dark, -5px -5px 10px $color-nm-light;
+  @include raised();
 }
 
 .lowered-m {
-  border-radius: 15px;
-  box-shadow: inset 5px 5px 10px $color-nm-dark,
-    inset -5px -5px 10px $color-nm-light;
+  @include lowered();
 }
 </style>
