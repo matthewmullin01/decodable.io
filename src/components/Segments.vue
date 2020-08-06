@@ -3,36 +3,28 @@
     <div class="radio-group">
       <div class="inline" v-for="option of options" v-bind:key="option.id">
         <input
+          thisdoesnothing="nada"
           type="radio"
-          name="selector"
-          :checked="option.selected"
-          :id="option.id"
+          name="option"
+          :checked="option"
+          :id="option"
           @change="onSelect(option)"
         />
-        <label v-bind:for="option.id">{{ option.text }}</label>
+        <label v-bind:for="option">{{ option }}</label>
       </div>
-      <!-- <input type="radio" id="option-two" name="selector" />
-      <label for="option-two">Two</label>
-      <input type="radio" id="option-three" name="selector" />
-      <label for="option-three">Three</label>-->
     </div>
   </div>
 </template>
 
 <script lang="ts">
-export interface Option {
-  text: string;
-  id: string;
-  selected: boolean;
-}
-
 export default {
   props: {
-    options: Array as () => Option[],
+    options: Array as () => string[],
+    selected: String,
   },
   methods: {
-    onSelect(option: Option) {
-      this.$emit("selected", option);
+    onSelect(option: string) {
+      this.$emit("update:selected", option);
     },
   },
 };
@@ -69,6 +61,7 @@ input[type="radio"]:hover + label {
 input[type="radio"]:checked + label {
   @include lowered();
   border-radius: 9px;
+  color: #111;
 }
 
 .radio-group {
