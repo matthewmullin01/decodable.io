@@ -10,7 +10,7 @@
 
     <transition name="slide-fade-v">
       <div v-if="text" class="output">
-        <pre>{{ decodedText }}</pre>
+        <pre>{{decodedText}}</pre>
       </div>
     </transition>
   </div>
