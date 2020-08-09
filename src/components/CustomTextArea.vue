@@ -38,7 +38,8 @@ export default {
         }
         return word;
       });
-      const fullSentence = convertedWords.join(" ");
+      const fullSentence = convertedWords.join(" ").replace(/(\r?\n) /g, "$1");
+
       return fullSentence;
     },
   },
@@ -98,7 +99,6 @@ textarea {
 
   pre {
     margin: 0;
-    white-space: pre-line;
   }
 }
 
