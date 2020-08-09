@@ -1,0 +1,54 @@
+[debug] [2020-08-09T19:54:00.467Z] ----------------------------------------------------------------------
+[debug] [2020-08-09T19:54:00.469Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-08-09T19:54:00.470Z] CLI Version:   8.0.3
+[debug] [2020-08-09T19:54:00.470Z] Platform:      darwin
+[debug] [2020-08-09T19:54:00.470Z] Node Version:  v10.16.3
+[debug] [2020-08-09T19:54:00.471Z] Time:          Sun Aug 09 2020 21:54:00 GMT+0200 (South Africa Standard Time)
+[debug] [2020-08-09T19:54:00.471Z] ----------------------------------------------------------------------
+[debug] [2020-08-09T19:54:00.471Z] 
+[debug] [2020-08-09T19:54:00.480Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-09T19:54:00.481Z] > authorizing via signed-in user
+[debug] [2020-08-09T19:54:00.481Z] [iam] checking project decod-d for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-08-09T19:54:00.485Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/decod-d:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-08-09T19:54:02.778Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 09 Aug 2020 19:54:02 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1502","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-09T19:54:02.780Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/decod-d  
+ 
+[debug] [2020-08-09T19:54:03.451Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 09 Aug 2020 19:54:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'decod-d'...
+[info] 
+[info] i  deploying hosting
+[debug] [2020-08-09T19:54:03.455Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/decod-d/versions  
+ {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-08-09T19:54:06.221Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 09 Aug 2020 19:54:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[decod-d]: beginning deploy...
+[info] i  hosting[decod-d]: found 32 files in dist
+[debug] [2020-08-09T19:54:06.240Z] [hosting] hash cache [ZGlzdA] stored for 32 files
+[debug] [2020-08-09T19:54:06.240Z] [hosting][hash queue][FINAL] {"max":2,"min":0,"avg":0,"active":0,"complete":32,"success":32,"errored":0,"retried":0,"total":32,"elapsed":5}
+[debug] [2020-08-09T19:54:06.240Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/decod-d/versions/5613e74e71ba9f9d:populateFiles  
+ <request body omitted>
+[debug] [2020-08-09T19:54:08.917Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 09 Aug 2020 19:54:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-09T19:54:08.918Z] [hosting][populate queue][FINAL] {"max":2679,"min":2679,"avg":2679,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2679}
+[debug] [2020-08-09T19:54:08.918Z] [hosting] uploads queued: 0
+[debug] [2020-08-09T19:54:08.918Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1597002848918}
+[info] ✔  hosting[decod-d]: file upload complete
+[debug] [2020-08-09T19:54:08.919Z] [hosting] deploy completed after 2697ms
+[debug] [2020-08-09T19:54:09.841Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "decod-d"
+    },
+    "site": "decod-d",
+    "version": "sites/decod-d/versions/5613e74e71ba9f9d"
+  }
+]
+[info] i  hosting[decod-d]: finalizing version...
+[debug] [2020-08-09T19:54:09.842Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/decod-d/versions/5613e74e71ba9f9d?updateMask=status  
+ {"status":"FINALIZED"}

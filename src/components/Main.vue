@@ -1,40 +1,50 @@
 <template>
-  <div class="container">
-    <div class="text-area-wrapper raised-m">
-      <CustomTextArea class="CustomTextArea flex-6" />
-      <ControlPanel class="flex-3" />
+  <div>
+    <div class="text-area-wrapper">
+      <CustomTextArea class="CustomTextArea" />
+    </div>
+
+    <div class="about-wrapper">
+      <About id="about" class="About" />
+    </div>
+
+    <div class="security-wrapper">
+      <Security id="security" class="Security" />
+    </div>
+
+    <div class="learn-more-wrapper">
+      <LearnMore id="learn" class="LearnMore" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HeroButton from "./HeroButton.vue";
-import Button from "./Button.vue";
 import CustomTextArea from "./CustomTextArea.vue";
-import ControlPanel from "./ControlPanel.vue";
+import About from "./About.vue";
+import Security from "./Security.vue";
+import LearnMore from "./LearnMore.vue";
 
-@Options({
+export default {
   components: {
-    HeroButton,
-    Button,
+    LearnMore,
+    Security,
+    About,
     CustomTextArea,
-    ControlPanel,
   },
-})
-export default class Main extends Vue {}
+};
 </script>
 
 <style scoped lang="scss">
-.container {
-  margin-top: 60px;
+.text-area-wrapper {
+  margin-top: 110px;
 }
 
-.text-area-wrapper {
-  display: flex;
-  padding: 40px 20px;
-  .CustomTextArea {
-    margin: auto 10px;
-  }
+.about-wrapper {
+  margin-top: 250px;
+  background: #f5f5f5;
+}
+
+.security-wrapper {
+  background: #4e4e4e;
 }
 </style>

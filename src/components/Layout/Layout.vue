@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div id="home">
     <Header />
     <Body />
+    <Footer />
   </div>
 </template>
 
@@ -9,10 +10,12 @@
 import { Options, Vue } from "vue-class-component";
 import Header from "./Header.vue";
 import Body from "./Body.vue";
+import Footer from "./Footer.vue";
 
 @Options({
   components: {
     Header,
+    Footer,
     Body,
   },
 })

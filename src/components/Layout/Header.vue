@@ -1,15 +1,19 @@
 <template>
   <header class="container">
-    <nav class="topnav" id="myTopnav">
-      <div class="app-icon raised-m">
-        <a href="#home">B64</a>
+    <nav>
+      <div class="app-icon">
+        <a href="#home">decod'd</a>
       </div>
 
-      <a href="#about" class="active">About</a>
-      <a href="#contact">Contact</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
+      <div class="primary-links">
+        <a href="#about" class="active">About</a>
+        <a href="#security">Security</a>
+        <a href="#learn">Learn</a>
+      </div>
+
+      <div class="end-links">
+        <a href="#support">Support Us</a>
+      </div>
     </nav>
   </header>
 </template>
@@ -20,94 +24,58 @@ import { Options, Vue } from "vue-class-component";
 @Options({
   components: {},
 })
-export default class Header extends Vue {
-  myFunction = () => {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const x = document.getElementById("myTopnav")!;
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  };
-}
+export default class Header extends Vue {}
 </script>
 
 <style scoped lang="scss">
-header {
-  display: flex;
+nav {
+  margin: 2em auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
+}
+
+.primary-links {
+  justify-self: center;
+}
+
+.end-links {
+  justify-self: end;
 }
 
 .app-icon {
-  padding: 20px;
-  margin: 50px;
-  font-weight: bold;
-  font-size: 1.2em;
+  justify-self: start;
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
+.app-icon a {
+  color: $color-text-dark;
+  padding: 0px;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #444;
-  text-align: center;
+nav a {
+  color: $color-text-primary;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
-  // background-color: #ddd;
+nav a:hover {
   color: black;
-  font-weight: bold;
 }
 
 /* Add an active class to highlight the current page */
-.topnav a.active {
+nav a.active {
   color: black;
   font-weight: bold;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home").
-Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
+@media (max-width: 500px) {
+  nav {
+    grid-template-columns: 1fr 1fr;
+  }
+  .primary-links {
     display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon.
- This class makes the topnav look good on small screens (display the links vertically instead of
- horizontally) */
-@media screen and (max-width: 600px) {
-  .topnav.responsive {
-    position: relative;
-  }
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
   }
 }
 </style>
