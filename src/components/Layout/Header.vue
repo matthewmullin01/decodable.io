@@ -2,7 +2,7 @@
   <header class="container">
     <nav>
       <div class="app-icon">
-        <a href="#home">decod'd</a>
+        <a href="#home">decod'r</a>
       </div>
 
       <div class="primary-links">

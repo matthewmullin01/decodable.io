@@ -2,7 +2,7 @@
   <footer>
     <div class="wrapper container">
       <div class="app-icon">
-        <a href="#home">decod'd</a>
+        <a href="#home">decod'r</a>
       </div>
 
       <small>Matthew Mullin © {{ new Date().getFullYear() }}</small>
