@@ -1,0 +1,33 @@
+[debug] [2020-08-10T14:04:04.510Z] ----------------------------------------------------------------------
+[debug] [2020-08-10T14:04:04.512Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-08-10T14:04:04.513Z] CLI Version:   8.0.3
+[debug] [2020-08-10T14:04:04.513Z] Platform:      darwin
+[debug] [2020-08-10T14:04:04.513Z] Node Version:  v10.16.3
+[debug] [2020-08-10T14:04:04.514Z] Time:          Mon Aug 10 2020 16:04:04 GMT+0200 (South Africa Standard Time)
+[debug] [2020-08-10T14:04:04.514Z] ----------------------------------------------------------------------
+[debug] [2020-08-10T14:04:04.514Z] 
+[debug] [2020-08-10T14:04:04.524Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-10T14:04:04.524Z] > authorizing via signed-in user
+[debug] [2020-08-10T14:04:04.525Z] [iam] checking project decod-d for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-08-10T14:04:04.528Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/decod-d:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-08-10T14:04:06.683Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 10 Aug 2020 14:04:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1506","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-10T14:04:06.686Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/decod-d  
+ 
+[debug] [2020-08-10T14:04:07.909Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 10 Aug 2020 14:04:07 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'decod-d'...
+[info] 
+[info] i  deploying hosting
+[debug] [2020-08-10T14:04:07.913Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/decod-d/versions  
+ {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-08-10T14:04:10.570Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 10 Aug 2020 14:04:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[decod-d]: beginning deploy...
+[info] i  hosting[decod-d]: found 29 files in dist
+[debug] [2020-08-10T14:04:10.694Z] [hosting] hash cache [ZGlzdA] stored for 29 files
+[debug] [2020-08-10T14:04:10.695Z] [hosting][hash queue][FINAL] {"max":101,"min":12,"avg":16.413793103448278,"active":0,"complete":29,"success":29,"errored":0,"retried":0,"total":29,"elapsed":111}
+[debug] [2020-08-10T14:04:10.695Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/decod-d/versions/2b2943b84443abd5:populateFiles  
+ <request body omitted>
+[debug] [2020-08-10T14:04:12.823Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 10 Aug 2020 14:04:12 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-10T14:04:12.830Z] [hosting][populate queue][FINAL] {"max":2131,"min":2131,"avg":2131,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2137}
+[debug] [2020-08-10T14:04:12.830Z] [hosting] uploads queued: 9

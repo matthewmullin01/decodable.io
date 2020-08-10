@@ -5,7 +5,8 @@
         <TextAreaOverlay v-if="!text" class="overlay" />
       </transition>
 
-      <textarea id="textarea" rows="32" v-model="text" placeholder="Start typing away"></textarea>
+      <label v-show="!text" for="textarea">Start typing away</label>
+      <textarea id="textarea" rows="32" v-model="text"></textarea>
     </div>
 
     <transition name="slide-fade-v">
@@ -74,6 +75,13 @@ $border-width: 28px;
   border-left: $border-width solid $border-color;
   padding-left: 20px;
   overflow: hidden;
+}
+
+label {
+  position: absolute;
+  font-family: monospace;
+  white-space: pre;
+  color: $color-text-primary;
 }
 
 textarea {
