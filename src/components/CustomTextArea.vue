@@ -18,34 +18,17 @@
 </template>
 
 <script lang="ts">
+import { ref, computed } from "vue";
 import TextAreaOverlay from "./TextAreaOverlay.vue";
 
 export default {
   components: {
     TextAreaOverlay,
   },
-  data() {
-    return {
-      text: "",
-    };
-  },
-  computed: {
-    decodedText(): string {
-      // aGVsbG9tb3RvdCBkYXMKZGFzZmRhcw==
-      const rawWords = this.text.split(/ |(\r?\n)/);
-      const convertedWords = rawWords.map((word) => {
-        if (this.isBase64(word)) {
-          return atob(word);
-        }
-        return word;
-      });
-      const fullSentence = convertedWords.join(" ").replace(/(\r?\n) /g, "$1");
+  setup() {
+    const text = ref("");
 
-      return fullSentence;
-    },
-  },
-  methods: {
-    isBase64(str: string) {
+    const isBase64 = (str: string): boolean => {
       if (!str || str === "" || str.trim() === "") {
         return false;
       }
@@ -54,7 +37,28 @@ export default {
       } catch (err) {
         return false;
       }
-    },
+    };
+
+    const decodedTextFn = (): string => {
+      // aGVsbG9tb3RvdCBkYXMKZGFzZmRhcw==
+      const rawWords = text.value.split(/ |(\r?\n)/);
+      const convertedWords = rawWords.map((word: string) => {
+        if (isBase64(word)) {
+          return atob(word);
+        }
+        return word;
+      });
+      const fullSentence = convertedWords.join(" ").replace(/(\r?\n) /g, "$1");
+
+      return fullSentence;
+    };
+
+    const decodedText = ref(computed(() => decodedTextFn()));
+
+    return {
+      text,
+      decodedText,
+    };
   },
   mounted() {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
