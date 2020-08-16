@@ -1,5 +1,5 @@
 <template>
-  <div class="text-section-wrapper container">
+  <div class="text-section-wrapper wrapper-light container">
     <h2>Learn About Encoding</h2>
 
     <p>

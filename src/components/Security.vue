@@ -1,5 +1,5 @@
 <template>
-  <div class="text-section-wrapper container">
+  <div class="text-section-wrapper wrapper-dark container">
     <h2>Security</h2>
 
     <ul>

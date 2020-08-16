@@ -1,5 +1,5 @@
 <template>
-  <div class="text-section-wrapper container">
+  <div class="text-section-wrapper wrapper-light container">
     <h2>About</h2>
 
     <p>
@@ -20,9 +20,7 @@
 </template>
 
 <script lang="ts">
-export default {
-  components: {},
-};
+export default {};
 </script>
 
 <style scoped lang="scss">

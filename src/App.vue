@@ -18,6 +18,7 @@ export default class App extends Vue {}
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;900&display=swap");
 
 @font-face {
   font-family: "BLOKK";
@@ -56,6 +57,7 @@ h5,
 h6 {
   color: $color-text-dark;
   font-weight: 900;
+  font-family: "Roboto Slab", serif;
 }
 
 .blokk {
@@ -91,9 +93,22 @@ label,
     color: inherit;
   }
 
+  &.wrapper-light {
+    h2 {
+      color: darken($color-text-primary, 25);
+    }
+  }
+
+  &.wrapper-dark {
+    h2 {
+      color: lighten($color-text-light, 25);
+    }
+  }
+
   h2 {
     padding: 0;
     margin: 0 0 0.7em 0;
+    // font-weight: 700;
   }
 }
 

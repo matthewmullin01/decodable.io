@@ -24,6 +24,10 @@ export default {};
   text-align: left;
 }
 
+h1 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
 .blokk {
   max-width: 470px;
 
