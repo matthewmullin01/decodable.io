@@ -10,8 +10,13 @@
     </div>
 
     <transition name="slide-fade-v">
-      <div v-if="text" class="output">
-        <pre>{{decodedText}}</pre>
+      <div v-if="text" class="output-wrapper">
+        <div class="control-wrapper">
+          <SegmentControl class="SegmentControl" v-model:value="mode" :segments="modeSegments" />
+        </div>
+        <div class="output-text-block">
+          <pre>{{ outputText }}</pre>
+        </div>
       </div>
     </transition>
   </div>
@@ -20,12 +25,33 @@
 <script lang="ts">
 import { ref, computed } from "vue";
 import TextAreaOverlay from "./TextAreaOverlay.vue";
+import SegmentControl from "./SegmentControl.vue";
 
 export default {
   components: {
     TextAreaOverlay,
+    SegmentControl,
+  },
+  data() {
+    return {
+      modeSegments: [
+        {
+          title: "Encode",
+          id: "encode",
+        },
+        {
+          title: "Auto",
+          id: "auto",
+        },
+        {
+          title: "Decode",
+          id: "decode",
+        },
+      ],
+    };
   },
   setup() {
+    const mode = ref("auto");
     const text = ref("");
 
     const isBase64 = (str: string): boolean => {
@@ -53,11 +79,24 @@ export default {
       return fullSentence;
     };
 
-    const decodedText = ref(computed(() => decodedTextFn()));
+    const encodedTextFn = (): string => {
+      // aGVsbG9tb3RvdCBkYXMKZGFzZmRhcw==
+
+      const encoded = btoa(text.value);
+
+      return encoded;
+    };
+
+    // const decodedText = ref(computed(() => decodedTextFn()));
+    // const encodedText = ref(computed(() => encodedTextFn()));
+    const outputText = ref(
+      computed(() => (mode.value === "encode" ? encodedTextFn() : decodedTextFn())),
+    );
 
     return {
+      mode,
       text,
-      decodedText,
+      outputText,
     };
   },
   mounted() {
@@ -81,6 +120,10 @@ $border-width: 28px;
   overflow: hidden;
 }
 
+.control-wrapper {
+  // width: 560px;
+}
+
 label {
   position: absolute;
   font-family: monospace;
@@ -100,17 +143,20 @@ textarea {
   pointer-events: none;
 }
 
-.output {
+.output-wrapper {
   margin-top: 2em;
-  background: #e3e3e3;
-  color: darken($color-text-primary, 15);
-  padding: 1em 1.5em;
   max-height: 500px;
-  overflow: hidden;
-  overflow: scroll;
 
-  pre {
-    margin: 0;
+  .output-text-block {
+    color: darken($color-text-primary, 15);
+    padding: 1em 1.5em;
+    margin-top: 0.4em;
+    background: #e3e3e3;
+    overflow: hidden;
+    overflow: scroll;
+    pre {
+      margin: 0;
+    }
   }
 }
 

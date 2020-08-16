@@ -5,18 +5,16 @@
     </p>-->
     <h1>Start typing or paste your text here</h1>
     <div class="blokk">
-      Loredsdm pdssu oodr
-      sddddit addmeddt
-      consecdeur idsc eit.
-      Nulldadsdddddaa lorem,
-      Nulldddasssa ddlem,
-      consecder dic eit.
+      Loredsdm pdssu oodr sddddit addmeddt consecdeur idsc eit. Nulldadsdddddaa lorem, Nulldddasssa
+      ddlem, consecder dic eit.
     </div>
   </div>
 </template>
 
 <script lang="ts">
-export default {};
+export default {
+  components: {},
+};
 </script>
 
 <style scoped lang="scss">
