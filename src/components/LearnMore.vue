@@ -6,7 +6,7 @@
       Base64 is a way to encode any binary data using only
       <i>A-Z, a-z and 0-9</i>. It gets it's name from
       the total number of characters it uses -
-      <i>64 from the 27 * 2 letters and the 10 digits</i>. It
+      <i>64 from the 26 * 2 letters and the 10 digits</i>. It
       converts all punctuation and whitespace to a more simple structure which often can prevent
       any issues when parsing data.
       <br />
