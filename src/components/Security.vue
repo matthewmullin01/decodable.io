@@ -9,14 +9,16 @@
     </ul>
     <br />
     <p>
-      decod'r was designed with security as the number one priority. All encoding and
-      decoding is completely managed on device, so nothing you enter ever leaves this site.
-      We do not store any information you provide other than standard non-identifiable
-      analytics data to help improve our site to better fit your needs.
+      Decodable was designed with security as the number one priority. All
+      encoding and decoding is completely managed on device, so nothing you
+      enter ever leaves this site. We do not store any information you provide
+      other than standard non-identifiable analytics data to help improve our
+      site to better fit your needs.
       <br />
       <br />We have followed modern
-      <a href="https://web.dev/progressive-web-apps/">Progressive Web App</a> standards to ensure
-      decod'r is fully available offline once the page has been cached initially.
+      <a href="https://web.dev/progressive-web-apps/">Progressive Web App</a>
+      standards to ensure Decodable is fully available offline once the page has
+      been cached initially.
     </p>
   </div>
 </template>

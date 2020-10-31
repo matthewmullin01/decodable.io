@@ -1,6 +1,6 @@
 {
-  "name": "decod'r",
-  "short_name": "decod'r",
+  "name": "Decodable",
+  "short_name": "Decodable",
   "icons": [
     {
       "src": "./android-chrome-192x192.png",

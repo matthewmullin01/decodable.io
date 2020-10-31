@@ -1,4 +1,4 @@
-# Decod'r
+# Decodable
 
 ## Project setup
 

@@ -2,7 +2,7 @@
   <header class="container">
     <nav>
       <div class="app-icon">
-        <a href="#home">decod'r</a>
+        <a href="#home">decodable.io</a>
       </div>
 
       <div class="primary-links">
@@ -15,7 +15,7 @@
         <a href="https://ko-fi.com/J3J3228E5" target="_blank">
           <img
             height="36"
-            style="border:0px;height:36px;"
+            style="border: 0px; height: 36px"
             src="https://cdn.ko-fi.com/cdn/kofi4.png?v=2"
             border="0"
             alt="Buy Me a Coffee at ko-fi.com"
