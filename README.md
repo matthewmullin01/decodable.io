@@ -28,9 +28,9 @@ super-secret-password:  Hogwarts101!
 
 ## Stack
 
-This project was built using Vue. It is a side project that I did primarily to learn the basics of Vue as well as geet some use from it as I often need to decode K8s secrets.
+This project was built using Vue. It is a side project that I did primarily to learn the basics of Vue. It has also proven to be an incredibly usefull application for me personally as I am decoding K8s secrets almost on a daily basis.
 
-My design guidance was to focus on user exeprience, by keeping things simple and understandabe.
+My design guidance was to focus on user experience by keeping things simple and understandabe.
 
 No CSS frameworks/libraries were used.
 
