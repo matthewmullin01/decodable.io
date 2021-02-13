@@ -1,6 +1,6 @@
 # Decodable - Simple & Secure Base64 Decoder
 
-Link - http://decodable.io/
+Link - https://decodable.io/
 
 ![Decodable](https://i.imgur.com/coJhS9K.png)
 
