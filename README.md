@@ -8,7 +8,7 @@ Decodable is built to help developers quickly and securely decode base64 encoded
 
 All encoding and decoding is done locally on your machine so no data is ever sent to a server.
 
-We have also added support for partial decoding as it is very common to have encoded data together with plain text, a la Kubernetes secrets. Give it a try - simply paste in partially encoded text and have a look at the output.
+Decodable alse supports partial decoding - where the string has a mix of encoded data together with plain text. One common example is Kubernetes secrets with palin text keys and encoded values. Give it a try - simply paste in partially encoded text and have a look at the output.
 
 ## Example
 
