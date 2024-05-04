@@ -8,7 +8,9 @@ Decodable is built to help developers quickly and securely decode base64 encoded
 
 All encoding and decoding is done locally on your machine so no data is ever sent to a server.
 
-Decodable alse supports partial decoding - where the string has a mix of encoded data together with plain text. One common example is Kubernetes secrets with palin text keys and encoded values. Give it a try - simply paste in partially encoded text and have a look at the output.
+It also supports partial decoding - where the string has a mix of encoded and plain text data. For example Kubernetes secrets contain plain text keys with encoded values. 
+
+Give it a try - simply paste in partially encoded text and have a look at the output.
 
 ## Example
 
@@ -28,32 +30,32 @@ super-secret-password:  Hogwarts101!
 
 ## Stack
 
-This project was built using Vue. It is a side project that I did primarily to learn the basics of Vue. It has also proven to be an incredibly usefull application for me personally as I am decoding K8s secrets almost on a daily basis.
+This project was built using Vue. It is a side project that I did primarily to learn the basics of Vue. It has also proven to be an incredibly useful application for me personally as I am decoding K8s secrets almost on a daily basis.
 
-My design guidance was to focus on user experience by keeping things simple and understandabe.
+I aimed to keep the user experience simple and understandable. 
 
-No CSS frameworks/libraries were used.
+No CSS frameworks or component libraries were used.
 
 
-## Project setup
+## Installation
 
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Run locally
 
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Build
 
 ```
 yarn build
 ```
 
-### Lints and fixes files
+### Linting
 
 ```
 yarn lint
